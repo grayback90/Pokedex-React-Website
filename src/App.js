@@ -39,7 +39,9 @@ render() {
       <h1>Pokedex</h1> {
         items.results.map((item) => (
           <ol key = {item.id} >
-            <div className='PokeCard'><p>{item.id} - {item.name}:</p></div>
+            <div className='PokeCard'>
+              <p><a href={item.url}>{item.name}</a></p>
+            </div>
           </ol>
         ))
       }

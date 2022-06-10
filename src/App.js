@@ -7,7 +7,7 @@ constructor(props) {
   super(props);
 
   this.state = {
-    items: [],
+    pokemons: [],
     DataisLoaded: false
   };
 }
@@ -16,7 +16,7 @@ constructor(props) {
 //Fetch all 898 Pokemon (need loop)
 componentDidMount(){
   fetch(
-    "https://pokeapi.co/api/v2/pokemon/151")
+    "https://pokeapi.co/api/v2/pokemon?limit=898")
     .then((res) => res.json())
     .then((json) => {
       this.setState({
@@ -30,7 +30,6 @@ componentDidMount(){
 
 render() {
   const { DataisLoaded, items } = this.state;
-  let pokemonID = 1;
   if(!DataisLoaded){ return <div>
     <h1>Please wait some time...</h1> </div>;
   }
@@ -38,15 +37,11 @@ render() {
   return (
     <div className = "App">
       <h1>Pokedex</h1> {
-          <ol key = { items.id } >
-            <h3>{ items.name } </h3>
-            <div className='PokeCard'><p>Normal:</p><img src={items.sprites.front_default}></img></div>
-            <div className='PokeCard'><p>Shiny:</p><img src={items.sprites.front_shiny}></img></div>
-            <div className='PokeCard'><p>Normal:</p><img src={items.sprites.front_default}></img></div>
-            <div className='PokeCard'><p>Shiny:</p><img src={items.sprites.front_shiny}></img></div>
-            <div className='PokeCard'><p>Normal:</p><img src={items.sprites.front_default}></img></div>
-            <div className='PokeCard'><p>Shiny:</p><img src={items.sprites.front_shiny}></img></div>
+        items.results.map((item) => (
+          <ol key = {item.id} >
+            <div className='PokeCard'><p>{item.id} - {item.name}:</p></div>
           </ol>
+        ))
       }
     </div>
   );

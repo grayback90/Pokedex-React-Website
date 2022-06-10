@@ -24,3 +24,8 @@
       transform: rotate(360deg);
   }
 }
+
+.PokeCard {
+  float: left;
+  width: 25%;
+}

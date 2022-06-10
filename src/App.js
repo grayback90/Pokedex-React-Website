@@ -40,8 +40,12 @@ render() {
       <h1>Pokedex</h1> {
           <ol key = { items.id } >
             <h3>{ items.name } </h3>
-            
-            <img src={items.sprites.front_shiny}></img>
+            <div className='PokeCard'><p>Normal:</p><img src={items.sprites.front_default}></img></div>
+            <div className='PokeCard'><p>Shiny:</p><img src={items.sprites.front_shiny}></img></div>
+            <div className='PokeCard'><p>Normal:</p><img src={items.sprites.front_default}></img></div>
+            <div className='PokeCard'><p>Shiny:</p><img src={items.sprites.front_shiny}></img></div>
+            <div className='PokeCard'><p>Normal:</p><img src={items.sprites.front_default}></img></div>
+            <div className='PokeCard'><p>Shiny:</p><img src={items.sprites.front_shiny}></img></div>
           </ol>
       }
     </div>

@@ -23,13 +23,13 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ## Changelog
 
-[x] Get the Info from one Pokemon.
-[x] Show it in a single card.
-[ ] Show all Pokemon-Cards.
-[ ] Show the Number.
-[ ] Show the sprite.
-[ ] Show the types.
-[ ] Make it Fancy.
-[ ] Possibility to sort the cards.
-[ ] Click on a Card for more Infos.
-[ ] Detailed Infos like shiny-sprite, back-sprite, ...
+[x] Get the Info from one Pokemon. \
+[x] Show it in a single card. \
+[ ] Show all Pokemon-Cards. \
+[ ] Show the Number. \
+[ ] Show the sprite. \
+[ ] Show the types. \
+[ ] Make it Fancy. \
+[ ] Possibility to sort the cards. \
+[ ] Click on a Card for more Infos. \
+[ ] Detailed Infos like shiny-sprite, back-sprite, ... \
